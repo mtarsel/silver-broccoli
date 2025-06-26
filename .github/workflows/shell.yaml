@@ -1,4 +1,4 @@
-name: mick-shell
+name: mick-shell-p10
 on:
   workflow_dispatch:
   push:
@@ -6,7 +6,7 @@ on:
   
 jobs:   
   power_shell:
-    runs-on: ubuntu-24.04-ppc64le
+    runs-on: ubuntu-24.04-ppc64le-p10
     steps:
     - uses: actions/checkout@v4
       
