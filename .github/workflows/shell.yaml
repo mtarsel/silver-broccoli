@@ -1,0 +1,26 @@
+name: mick-shell
+on:
+  workflow_dispatch:
+  push:
+  pull_request:
+  
+jobs:   
+  power_shell:
+    runs-on: ubuntu-24.04-ppc64le
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Env Snoop
+      run: |
+        echo "#####################"
+        ls -lha
+        pwd
+        whoami
+        df -h
+        echo "#####################"
+        cat /etc/hosts
+        ip a
+        echo "##route below##"
+        ip r
+        echo "#####################"
+        cat /etc/os-release
